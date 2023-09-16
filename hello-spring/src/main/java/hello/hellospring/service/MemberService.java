@@ -25,7 +25,7 @@ public class MemberService {
         validateDuplicateMember(member);//중복 회원 검증
         memberRepository.save(member);
         return member.getId();
-    }
+     }
 
     private void validateDuplicateMember(Member member) {
         memberRepository.findByName(member.getName())
